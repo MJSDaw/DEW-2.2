@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 2 Ejercicio 2</title>
+</head>
+<body>
+    <label for="numero">Introduce un numero</label><input type="number" id="numero">
+    <button onclick="enviar()">Calcular tabla</button>
+    <div id="resultado"></div>
+    <script>
+        function enviar(){
+            let numero = parseInt(document.getElementById('numero').value);
+            let imprimir = '';
+            
+            for(let i = 10; i > 0; i--){
+                imprimir += `${numero} x ${i} = ${numero * i} <br>`;
+            }
+
+            document.getElementById('resultado').innerHTML = imprimir;
+        }
+    </script>
+</body>
+</html>

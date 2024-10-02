@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 2 Ejercicio 2</title>
+</head>
+<body>
+    <label for="introduccion">Introduce un numero</label><input type="number" id="numero">
+    <button onclick="enviar()">Calcular factorial</button>
+    <div id="resultado"></div>
+    <script>
+        function enviar(){
+            let numero = parseInt(document.getElementById('numero').value);
+            let imprimir = numero;
+            if(numero == 0){
+                imprimir = 1;
+            } else {
+                for(let i = numero-1; i > 0; i--){
+                    imprimir *= i;
+                }
+            }
+            document.getElementById('resultado').innerHTML = imprimir;
+        }
+    </script>
+</body>
+</html>

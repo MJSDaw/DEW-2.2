@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 2 Ejercicio 2</title>
+</head>
+<body>
+    <label for="numero1">Introduce numero 1</label><input type="number" id="numero1">
+    <label for="numero2">Introduce numero 2</label><input type="number" id="numero2">
+    <label for="numero3">Introduce numero 3</label><input type="number" id="numero3">
+    <button onclick="enviar()">Enviar</button>
+    <div id="resultado"></div>
+    <script>
+        function enviar(){
+            let numero1 = parseInt(document.getElementById('numero1').value);
+            let numero2 = parseInt(document.getElementById('numero2').value);
+            let numero3 = parseInt(document.getElementById('numero3').value);
+            let imprimir = '';
+            if(numero1 > numero2 && numero1 > numero3){
+                imprimir = 'El número 1 es el más grande.';
+            } else if(numero2 > numero3) {
+                imprimir = 'El número 2 es el más grande.';
+            } else if(numero1 != numero2 || numero2 != numero3) {
+                imprimir = 'El número 3 es el más grande.';
+            } else {
+                imprimir = 'Los 3 números son iguales'
+            }
+            document.getElementById('resultado').innerHTML = imprimir;
+        }
+    </script>
+</body>
+</html>

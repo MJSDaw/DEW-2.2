@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 2 Ejercicio 1</title>
+</head>
+<body>
+    <label for="introduccion">Introduce un numero</label><input type="number" id="numeroa">
+    <label for="introduccion">Introduce otro numero</label><input type="number" id="numerob">
+    <button onclick="calcular()">Calcular</button>
+    <div id="resultado"></div>
+    <script>
+        function calcular(){
+            let numeroA = parseInt(document.getElementById('numeroa').value);
+            let numeroB = parseInt(document.getElementById('numerob').value);
+            document.getElementById('resultado').innerHTML = 
+            "El resultado de la suma de ambos numeros es: " + (numeroA + numeroB) + 
+            "<br>El resultado de la resta de ambos numeros es: " + (numeroA - numeroB) + 
+            "<br>El resultado de la multiplicación de ambos números es: " + (numeroA * numeroB) + 
+            "<br>El resultado de la división de ambos números es: " + (numeroA / numeroB) + 
+            "<br>El resultado del módulo de ambos números es: " + (numeroA % numeroB);
+        }
+    </script>
+</body>
+</html>
